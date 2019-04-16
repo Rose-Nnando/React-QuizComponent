@@ -9,7 +9,7 @@ class Quiz extends Component {
         super(props);
         this.state = { quiz_position: 1}
     }
-    handlResetClick() {
+    handleResetClick() {
         this.setState((state) => {
             return { quiz_position: 1 }
         });
@@ -28,7 +28,7 @@ class Quiz extends Component {
                     <QuizQuestion
                         quiz_question={quizData.quiz_questions[this.state.quiz_position - 1]}
                         showNextQuestionHandler={this.showNextQuestion.bind(this)}
-                        resetClickHandler={this.handlResetClick.bind(this)}
+                        resetClickHandler={this.handleResetClick.bind(this)}
                     />
                 }             
             </div>
